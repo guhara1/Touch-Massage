@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/s.*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/i/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
